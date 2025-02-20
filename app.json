@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "localization": {
+      "defaultLocale": "ru"
+    },
+    "name": "S7Energy",
+    "slug": "s7",
+    "scheme": "s7",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.1.9",
+    "orientation": "portrait",
+    "icon": "./assets/iconS7.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.myapp.s7",
+      "buildNumber": "1.1.9",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Это приложение требует доступ к вашей камере для сканирования штрих-кодов для быстрого и удобного идентификации продуктов.",
+        "NSMicrophoneUsageDescription": "Это приложение нуждается в доступе к вашему микрофону для записи аудио сообщений и заметок.",
+        "NSLocationWhenInUseUsageDescription": "Это приложение использует ваше местоположение для предоставления персонализированных услуг, таких как поиск ближайших мест и событий.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Это приложение нуждается в доступе к вашему местоположению даже когда оно не используется, чтобы улучшить пользовательский опыт с отслеживанием местоположения.",
+        "NSLocationAlwaysUsageDescription": "Это приложение требует доступ к вашему местоположению в любое время для предоставления непрерывных функций на основе местоположения.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/iconS7.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.INTERNET"
+      ],
+      "package": "com.alex_neo_2024.s7",
+      "versionCode": 19
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Разрешите $(PRODUCT_NAME) доступ к вашей камере",
+          "microphonePermission": "Разрешите $(PRODUCT_NAME) доступ к вашему микрофону",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Разрешите $(PRODUCT_NAME) доступ к камере."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "1b185be0-aca8-4846-aad7-d5ccf89740b5"
+      }
+    },
+    "owner": "aleksandr_khokhrin"
+  }
+}
